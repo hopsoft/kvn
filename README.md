@@ -10,10 +10,10 @@
 ## Key/Value Notation
 
 Similar to JSON but more limited in scope.
-Can be used to represent basic key/value data structures as human readable strings.
+Can be used to represent basic key/value data structures as (human readable) strings.
 
-Useful when working with limited storage options,
-and extra data needs to be captured in a single field.
+Useful when working with limited storage options
+to capture additional (human readable) data in a single field.
 
 ## Rules
 
