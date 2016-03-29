@@ -23,15 +23,15 @@ Can be used to represent basic key/value data structures as human readable strin
 ### Convert a Hash to a KVN string
 
 ```ruby
-data = { d: "example with whitespace", a: true, c: "example", b: 1 }
+data = { d: "example with whitespace", a: true, c: "example", b: 1, e: nil }
 Kvn::Converter.new(data).convert
-# => "a:true; b:1; c:example; d:example with whitespace;"
+# => "a:true; b:1; c:example; d:example with whitespace; e:null;"
 ```
 
 ### Parse a KVN string into a Hash
 
 ```ruby
-value = "a:true; b:1; c:example; d:example with whitespace;"
+value = "a:true; b:1; c:example; d:example with whitespace; e:null;"
 Kvn::Parser.new(value).parse
-# => {"a"=>"true", "b"=>"1", "c"=>"example", "d"=>"example with whitespace"}
+# => {"a"=>true, "b"=>1, "c"=>"example", "d"=>"example with whitespace", "e"=>nil}
 ```

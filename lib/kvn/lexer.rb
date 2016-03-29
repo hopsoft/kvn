@@ -9,14 +9,14 @@ module Kvn
       :PARTDELIM
     )
 
-    rule :KEY, /(\w|\s)+(?=:)/
-    rule :VALUE, /(\w|\s)+(?=;)/
+    rule :KEY, /\w+(?=:)/
+    rule :VALUE, /[\w+(\s|\.)]+(?=;)/
     rule :PAIRDELIM, /;\s*/
     rule :PARTDELIM, /:/
 
     error do |lexer, token|
-      message = "Illegal character in KVN string! #{token.line}:#{token.column} #{token.value}"
-      raise Kvn::IllegalCharacterError.new(message)
+      message = "Illegal character in KVN string! #{token.line}:#{token.column} <#{token.value}>"
+      raise SyntaxError.new(message)
     end
   end
 end

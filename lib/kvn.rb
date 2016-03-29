@@ -1,8 +1,8 @@
 require "kvn/version"
-require "kvn/illegal_character_error"
 require "kvn/unsupported_hash_error"
-require "kvn/converter"
+require "kvn/value_lexer"
 require "kvn/lexer"
+require "kvn/converter"
 require "kvn/parser"
 
 module Kvn

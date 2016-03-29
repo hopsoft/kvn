@@ -13,7 +13,10 @@ module Kvn
 
     def convert
       value.keys.sort.each_with_object([]) do |key, memo|
-        memo << "#{key}:#{value[key]};"
+        v = value[key]
+        v = "null" if v.nil?
+        next if v.to_s.strip.empty?
+        memo << "#{key}:#{v};"
       end.join(" ")
     end
 
