@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nathan Hopkins"]
   spec.email         = ["natehop@gmail.com"]
 
-  spec.summary       = %q{KVN (kevin) parser}
+  spec.summary       = %q{KVN key/value notation converter & parser}
   spec.homepage      = "https://github.com/hopsoft/kvn"
   spec.license       = "MIT"
 
