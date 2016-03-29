@@ -1,29 +1,29 @@
 module Kvn
   class Parser
+    attr_reader :value
 
-    def parse(value)
-      parsed = {}
-      lexer = Kvn::Lexer.new
-      output = lexer.lex(standardize_value(value))
+    def initialize(value)
+      @value = value.to_s.strip
+      @lexer = Kvn::Lexer.new
+    end
 
-      begin
-        key = nil
-        while output.peek
-          token = output.next
-          key = token.value if token.name == :KEY
-          parsed[key] = token.value if token.name == :VALUE
+    def parse
+      output = lexer.lex(value)
+      {}.tap do |parsed|
+        begin
+          key = nil
+          while output.peek
+            token = output.next
+            key = token.value if token.name == :KEY
+            parsed[key] = token.value if token.name == :VALUE
+          end
+        rescue StopIteration
         end
-      rescue StopIteration
       end
-
-      parsed
     end
 
     private
 
-    def standardize_value(value)
-      value.to_s.strip
-    end
-
+    attr_reader :lexer
   end
 end
