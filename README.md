@@ -1,3 +1,10 @@
+[![Lines of Code](http://img.shields.io/badge/lines_of_code-145-brightgreen.svg?style=flat)](http://blog.codinghorror.com/the-best-code-is-no-code-at-all/)
+[![Code Status](http://img.shields.io/codeclimate/github/hopsoft/kvn.svg?style=flat)](https://codeclimate.com/github/hopsoft/kvn)
+[![Dependency Status](http://img.shields.io/gemnasium/hopsoft/kvn.svg?style=flat)](https://gemnasium.com/hopsoft/kvn)
+[![Build Status](http://img.shields.io/travis/hopsoft/kvn.svg?style=flat)](https://travis-ci.org/hopsoft/kvn)
+[![Coverage Status](https://img.shields.io/coveralls/hopsoft/kvn.svg?style=flat)](https://coveralls.io/r/hopsoft/kvn?branch=master)
+[![Downloads](http://img.shields.io/gem/dt/kvn.svg?style=flat)](http://rubygems.org/gems/kvn)
+
 # KVN (kevin)
 
 ## Key/Value Notation
