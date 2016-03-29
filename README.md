@@ -45,3 +45,4 @@ value = "a:true; b:1; c:example; d:example with whitespace; e:null;"
 Kvn::Parser.new(value).parse
 # => {"a"=>true, "b"=>1, "c"=>"example", "d"=>"example with whitespace", "e"=>nil}
 ```
+
