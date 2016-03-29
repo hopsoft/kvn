@@ -5,6 +5,9 @@
 Similar to JSON but more limited in scope.
 Can be used to represent basic key/value data structures as human readable strings.
 
+Useful when working with limited storage options,
+and extra data needs to be captured in a single field.
+
 ## Rules
 
 * Data structures should be flat (i.e. 1 level deep, no nesting)
