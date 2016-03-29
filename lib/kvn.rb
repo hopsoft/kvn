@@ -1,4 +1,5 @@
 require "kvn/version"
+require "kvn/illegal_character_error"
 require "kvn/lexer"
 require "kvn/parser"
 

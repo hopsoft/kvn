@@ -1,4 +1,4 @@
-require_relative "../lib/kvn"
+require_relative "test_helper"
 
 module Kvn
   class ParserTest < PryTest::Test
@@ -9,10 +9,13 @@ module Kvn
       assert Kvn::Parser.new.parse(value) == expected
     end
 
-    #test "parse invalid value" do
-    #  value = "some random string... foo:bar;baz"
-    #  expected = {"a"=>"true", " b"=>"1", " c"=>"example", " d"=>"example with whitespace"}
-    #  assert Kvn.parse(value) == expected
-    #end
+    test "parse invalid value" do
+      value = "foo:bar; invalid stuff here"
+      begin
+        Kvn::Parser.new.parse(value)
+      rescue Kvn::IllegalCharacterError => e
+      end
+      assert !e.nil? && e.message == "Illegal character in KVN string! 1:10 i"
+    end
   end
 end

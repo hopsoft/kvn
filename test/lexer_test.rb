@@ -1,4 +1,4 @@
-require_relative "../lib/kvn"
+require_relative "test_helper"
 
 module Kvn
   class LexerTest < PryTest::Test
