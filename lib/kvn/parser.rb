@@ -8,6 +8,7 @@ module Kvn
 
     def parse
       lexer = Kvn::Lexer.new
+      value_lexer = Kvn::ValueLexer.new
       output = lexer.lex(value)
       {}.tap do |parsed|
         begin
@@ -24,7 +25,7 @@ module Kvn
 
             if token.name == :VALUE
               raise SyntaxError.new("Empty key detected for value! <#{token.value}>") unless key_found
-              parsed[key] = parse_value(token.value)
+              parsed[key] = value_lexer.lex(token.value).next.value
               value_found = true
               key_found = false
             end
@@ -35,21 +36,6 @@ module Kvn
           end
         rescue StopIteration
         end
-      end
-    end
-
-    private
-
-    def parse_value(value)
-      lexer = Kvn::ValueLexer.new
-      token = lexer.lex(value).next
-      case token.name
-      when :NIL then value = nil
-      when :TRUE then value = true
-      when :FALSE then value = false
-      when :FLOAT then value = value.to_f
-      when :INTEGER then value = value.to_i
-      else value.to_s
       end
     end
 

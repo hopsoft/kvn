@@ -1,3 +1,4 @@
+require "lex"
 require "kvn/version"
 require "kvn/unsupported_hash_error"
 require "kvn/value_lexer"

@@ -1,5 +1,3 @@
-require "lex"
-
 module Kvn
   class Lexer < Lex::Lexer
     tokens(
