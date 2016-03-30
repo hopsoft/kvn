@@ -26,7 +26,6 @@ to capture complex data in a single field.
 * Colons & semicolons are reserved & are prohibited in keys & values
 * Data structures should be flat&mdash; 1 level deep, no nesting
 * Keys & values are limited to primitive types
-  * Null
   * Boolean
   * String
   * Numeric
