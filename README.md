@@ -13,23 +13,23 @@
 name:kvn; pronunciation:kĕ'vĭn; summary:Key/Value Notation;
 ```
 
-Similar to JSON but more limited in scope.
-Can be used to represent basic key/value data structures as __human readable__ strings.
+Similar to JSON but narrower in scope.
+Used to represent basic key/value data structures as legible strings.
 
 Useful when working with limited storage options
-to capture additional __human readable__ data in a single field.
+to capture complex data in a single field.
 
 ## Rules
 
-* Data structures should be flat (i.e. 1 level deep, no nesting)
+* Key & value are delimited with a colon `:`
+* Key/value pairs are delimited with a semicolon `;`
+* Colons & semicolons are reserved & are prohibited in keys & values
+* Data structures should be flat&mdash; 1 level deep, no nesting
 * Keys & values are limited to primitive types
-
+  * Null
+  * Boolean
   * String
   * Numeric
-  * Boolean
-  * Null
-
-* Colons & semicolons are prohibited in keys & values
 * Keys are sorted alphabetically
 
 ## Examples
