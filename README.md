@@ -9,6 +9,10 @@
 
 ## Key/Value Notation
 
+```
+name:kvn; pronunciation:kĕ'vĭn; summary:Key/Value Notation;
+```
+
 Similar to JSON but more limited in scope.
 Can be used to represent basic key/value data structures as __human readable__ strings.
 
