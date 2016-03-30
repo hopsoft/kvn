@@ -14,10 +14,8 @@ name:kvn; pronunciation:kĕ'vĭn; summary:Key/Value Notation;
 ```
 
 Similar to JSON but narrower in scope.
-Used to represent basic key/value data structures as legible strings.
-
-Useful when working with limited storage options
-to capture complex data in a single field.
+Represents basic key/value data structures as legible strings.
+Useful when working with limited storage options to capture complex data in a single field.
 
 ## Rules
 
