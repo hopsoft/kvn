@@ -5,15 +5,15 @@
 [![Coverage Status](https://img.shields.io/coveralls/hopsoft/kvn.svg?style=flat)](https://coveralls.io/r/hopsoft/kvn?branch=master)
 [![Downloads](http://img.shields.io/gem/dt/kvn.svg?style=flat)](http://rubygems.org/gems/kvn)
 
-# KVN (kevin)
+# KVN (kĕ'vĭn)
 
 ## Key/Value Notation
 
 Similar to JSON but more limited in scope.
-Can be used to represent basic key/value data structures as (human readable) strings.
+Can be used to represent basic key/value data structures as __human readable__ strings.
 
 Useful when working with limited storage options
-to capture additional (human readable) data in a single field.
+to capture additional __human readable__ data in a single field.
 
 ## Rules
 
