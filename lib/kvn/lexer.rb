@@ -8,7 +8,7 @@ module Kvn
     )
 
     rule :KEY, /\w+(?=:)/
-    rule :VALUE, /[\w+(\s|\.)]+(?=;)/
+    rule :VALUE, /[\w\s\.\-]+(?=;)/
     rule :PAIRDELIM, /;\s*/
     rule :PARTDELIM, /:/
 

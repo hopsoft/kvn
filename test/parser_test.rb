@@ -66,6 +66,24 @@ module Kvn
       assert parsed == expected
     end
 
+    test "parse complex value 2" do
+      value = "agent:Ashley; host:www.foo.com; name:click; partner:ExampleService; target:www.bar.com; type:primary-site-link; utm_content:baz-001; utm_medium:foo-bar-baz-test; utm_source:500409; value:0.13;"
+      expected = {
+        "agent"=>"Ashley",
+         "host"=>"www.foo.com",
+         "name"=>"click",
+         "partner"=>"ExampleService",
+         "target"=>"www.bar.com",
+         "type"=>"primary-site-link",
+         "utm_content"=>"baz-001",
+         "utm_medium"=>"foo-bar-baz-test",
+         "utm_source"=>500409,
+         "value"=>0.13
+      }
+      parsed = Kvn::Parser.new(value).parse
+      assert parsed == expected
+    end
+
     test "parse multiple valid values" do
       value = "a:true; b:1; c:example; d:example with whitespace; e:null; f:0.1;"
       expected = {"a"=>true, "b"=>1, "c"=>"example", "d"=>"example with whitespace", "e"=>nil, "f"=>0.1}
@@ -106,6 +124,7 @@ module Kvn
       parsed = Kvn::Parser.new("").parse
       assert parsed == {}
     end
+
 
   end
 end
