@@ -22,10 +22,6 @@ module Kvn
 
     private
 
-    def standardize_value(value)
-      value.to_s.strip
-    end
-
     def value_types
       value.values.map(&:class).uniq
     end
