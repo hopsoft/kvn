@@ -1,11 +1,8 @@
 [![Lines of Code](http://img.shields.io/badge/lines_of_code-144-brightgreen.svg?style=flat)](http://blog.codinghorror.com/the-best-code-is-no-code-at-all/)
-[![Code Status](http://img.shields.io/codeclimate/github/hopsoft/kvn.svg?style=flat)](https://codeclimate.com/github/hopsoft/kvn)
-[![Dependency Status](http://img.shields.io/gemnasium/hopsoft/kvn.svg?style=flat)](https://gemnasium.com/hopsoft/kvn)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8c94848444b6afc448b8/maintainability)](https://codeclimate.com/github/hopsoft/kvn/maintainability)
 [![Build Status](http://img.shields.io/travis/hopsoft/kvn.svg?style=flat)](https://travis-ci.org/hopsoft/kvn)
 [![Coverage Status](https://img.shields.io/coveralls/hopsoft/kvn.svg?style=flat)](https://coveralls.io/r/hopsoft/kvn?branch=master)
 [![Downloads](http://img.shields.io/gem/dt/kvn.svg?style=flat)](http://rubygems.org/gems/kvn)
-
-<a rel="nofollow" href="https://app.codesponsor.io/link/QMSjMHrtPhvfmCnk5Hbikhhr/hopsoft/kvn"><img src="https://app.codesponsor.io/embed/QMSjMHrtPhvfmCnk5Hbikhhr/hopsoft/kvn.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
 
 # KVN (kĕ'vĭn)
 
