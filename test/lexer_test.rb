@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require_relative "test_helper"
 
 module Kvn
   class LexerTest < PryTest::Test
-
     test "valid input" do
       lexer = Kvn::Lexer.new
       input = "a:true; b:1; c:example; d:example with whitespace;"
@@ -27,6 +28,5 @@ module Kvn
       ]
       assert output.to_a.map(&:inspect) == expected
     end
-
   end
 end

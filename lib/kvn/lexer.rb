@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Kvn
   class Lexer < Lex::Lexer
     tokens(
@@ -8,7 +10,7 @@ module Kvn
     )
 
     rule :KEY, /\w+(?=:)/
-    rule :VALUE, /[\w\s\.\-]+(?=;)/
+    rule :VALUE, /[\w\s.\-]+(?=;)/
     rule :PAIRDELIM, /;\s*/
     rule :PARTDELIM, /:/
 

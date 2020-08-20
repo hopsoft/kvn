@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "lex"
 require "kvn/version"
 require "kvn/unsupported_hash_error"
@@ -14,8 +16,6 @@ module Kvn
     Symbol,
     String,
     Integer,
-    Fixnum,
-    Bignum,
     Float,
     Rational
   ]

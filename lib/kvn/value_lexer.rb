@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Kvn
   class ValueLexer < Lex::Lexer
     tokens(

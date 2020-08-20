@@ -1,9 +1,15 @@
+# frozen_string_literal: true
+
 module Kvn
   class Converter
     attr_reader :value
 
     def initialize(value)
-      @value = (value ||= {}).to_h rescue {}
+      @value = begin
+                 (value || {}).to_h
+               rescue
+                 {}
+               end
 
       if invalid_values_present?
         message = "All values must be a supported type! #{Kvn::SUPPORTED_VALUE_TYPES.join ", "}"
@@ -12,12 +18,12 @@ module Kvn
     end
 
     def convert
-      value.keys.sort.each_with_object([]) do |key, memo|
+      value.keys.sort.each_with_object([]) { |key, memo|
         v = value[key]
         v = "null" if v.nil?
         next if v.to_s.strip.empty?
         memo << "#{key}:#{v};"
-      end.join(" ")
+      }.join(" ")
     end
 
     private
@@ -29,6 +35,5 @@ module Kvn
     def invalid_values_present?
       !(value_types - Kvn::SUPPORTED_VALUE_TYPES).empty?
     end
-
   end
 end
